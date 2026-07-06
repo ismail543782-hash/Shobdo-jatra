@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import {
   Heart, Trophy, Play, Lock, RotateCcw, Zap, ArrowLeft,
   Wind, Puzzle, Swords, BookOpen, Star, Clock, ChevronRight, Gamepad2, MapPin,
@@ -933,6 +934,7 @@ export default function App() {
       {screen === 'builder' && <SentenceBuilder {...modeProps('builder')} />}
       {screen === 'battle' && <VocabBattle {...modeProps('battle')} />}
       {screen === 'story' && <StoryMatch {...modeProps('story')} />}
+      <Analytics />
     </Frame>
   );
 }
